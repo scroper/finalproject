@@ -31,6 +31,7 @@ public class War {
             //spades
             a[i+39] = new Card(3, i+1, 0, Math.random());
         }
+
     }
     public static void sortDeck(Card[] a){
         Arrays.sort(a);
@@ -87,6 +88,7 @@ public class War {
                 count2++;
             }
         }
+
         System.out.println("Player 1 drew " + p1 + " Player 2 drew " + p2);
         if (p1.rank == p2.rank){
             System.out.println("You guys tied. Get ready for a WAR!!");
