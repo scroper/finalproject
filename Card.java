@@ -10,24 +10,23 @@ public class Card implements Comparable<Card> {
 
 
     private static final String[] suits = { "Clubs", "Diamonds", "Hearts", "Spades" };
-    private static final String[] ranks = { "narf", "2", "3", "4", "5", "6",
-            "7", "8", "9", "10", "Jack", "Queen", "King", "Ace" };
-    private static final int[] owners = {1, 2};
+    private static final String[] ranks = { "narf", "Ace", "2", "3", "4", "5", "6",
+            "7", "8", "9", "10", "Jack", "Queen", "King"};
+
 
     /**
      * No-argument constructor.
      */
     public Card() {
-        this(0, 0, 0, 0);
+        this(0, 0, 0);
     }
 
     /**
      * Constructor with arguments.
      */
-    public Card(int suit, int rank, int owner, double value) {
+    public Card(int suit, int rank, double value) {
         this.suit = suit;
         this.rank = rank;
-        this.owner = owner;
         this.value = value;
     }
 
@@ -61,13 +60,10 @@ public class Card implements Comparable<Card> {
      * -1 if the seconds card is greater, and 0 if they are the equivalent.
      */
     public int compareTo(Card that) {
-        // first compare the suits
+        // first compare the values
         if (this.value > that.value) return 1;
         if (this.value < that.value) return -1;
 
-        // compare the ranks
-        if (this.rank > that.rank) return 1;
-        if (this.rank < that.rank) return -1;
         return 0;
     }
 
