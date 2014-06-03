@@ -2,8 +2,6 @@
  * Created by Sean Roper on 5/7/14.
  */
 import javafx.application.Application;
-import javafx.geometry.HPos;
-import javafx.geometry.VPos;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextArea;
@@ -137,8 +135,10 @@ public class War extends Application{
     }
 
     public void draw(){
-        Card p1 = playerHand.get(0);
-        Card p2 = compHand.get(0);
+        if(playerHand.size()==0){results.setText("YOU LOST THE GAME");}
+        if(compHand.size()==0){results.setText("YOU WIN");}
+        Card p1 = playerHand.get((int) (Math.random()*playerHand.size()));
+        Card p2 = compHand.get((int) (Math.random()*compHand.size()));
         String pl = p1.suit + "-" + p1.rank;
         String co = p2.suit + "-" + p2.rank;
         playerCard = new Image("/img/" + pl + ".png");
@@ -184,13 +184,23 @@ public class War extends Application{
         Card play2 = compHand.get(a);
 
         results.setText("In the war, Player 1 drew " + play1 + " Player 2 drew " + play2);
+        String pl = play1.suit + "-" + play1.rank;
+        String co = play2.suit + "-" + play2.rank;
+        playerCard = new Image("/img/" + pl + ".png");
+        ivTest = new ImageView(playerCard);
+        GridPane.setConstraints(ivTest, 0, 1);
+        compCard = new Image("/img/" + co + ".png");
+        ImageView iv3 = new ImageView(compCard);
+        GridPane.setConstraints(iv3, 1, 1);
+        box.getChildren().addAll(ivTest, iv3);
+
         if (play1.rank == play2.rank){
             results.appendText(". You tied, prepare to battle again.");
             a+=4;
             war(a);
 
         } else if (play1.rank > play2.rank){
-            results.appendText(". Player 1 won the war. The cards you lost were:");
+            results.appendText(". Player 1 won the war. The cards you won were:");
             for (int m = 0; m < a; m++) {
                 results.appendText(compHand.get(0).toString());
                 playerHand.add(compHand.get(0));
