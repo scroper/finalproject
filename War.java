@@ -57,7 +57,7 @@ public class War extends Application{
         Image image2 = new Image("/img/2.png");
         ImageView iv2 = new ImageView(image2);
         playRemain.setMaxSize(300, 30);
-        playRemain.setText("Player 1 has " + playerHand.size() + " cards. The Computer has " + compHand.size() + " cards.");
+        playRemain.setText("Welcome to war. Aces are low. Good luck.");
         results.setMaxSize(300,120);
         results.setWrapText(true);
 
@@ -158,7 +158,7 @@ public class War extends Application{
 
         if (p1.rank == p2.rank){
             results.setText("You tied, prepare for WAR!");
-            war(0);
+            war(4);
         } else if (p1.rank > p2.rank){
             results.setText("You won this hand.");
             playerHand.add(compHand.get(0));
