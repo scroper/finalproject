@@ -5,7 +5,6 @@ public class Card implements Comparable<Card> {
 
     protected int suit;
     protected int rank;
-    protected int owner;
     protected double value;
 
 
@@ -67,9 +66,7 @@ public class Card implements Comparable<Card> {
         return 0;
     }
 
-    public void setOwner(int owner){
-        this.owner = owner;
-    }
+
     public void setRank(int rank) {this.rank = rank; }
     public void setValue(Double value){
         this.value = value;
