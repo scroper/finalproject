@@ -8,4 +8,4 @@ High/Low card game in which two players (you and the computer) flip over a card.
 
 To Run
 
-Compile and Run War.java. Play is simple, press q to quit, anything else to continue playing. 
+Compile and Run War.java to play the game.
