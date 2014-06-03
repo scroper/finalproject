@@ -1,11 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d847c1d1-a369-45ab-8c45-15210221e0b0" name="Default" comment="Added images, removed test files">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" />
-      <change type="DELETED" beforePath="C:\Users\penguin\Documents\School\csis10a\finalproject\Test.java" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\penguin\Documents\School\csis10a\finalproject\Thing.java" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/War.java" afterPath="$PROJECT_DIR$/War.java" />
+    <list default="true" id="d847c1d1-a369-45ab-8c45-15210221e0b0" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="finalproject.iws" />
@@ -465,12 +461,17 @@
       <updated>1401771851854</updated>
       <workItem from="1401771857997" duration="21172000" />
       <workItem from="1401793586675" duration="51000" />
-      <workItem from="1401826190443" duration="1312000" />
+      <workItem from="1401826190443" duration="1389000" />
     </task>
+    <task id="LOCAL-00001" summary="Added images, removed test files">
+      <created>1401827533817</created>
+      <updated>1401827533817</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="22535000" />
+    <option name="totallyTimeSpent" value="22612000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
